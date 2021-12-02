@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Axios from "axios";
+import axios from "axios";
 
 import {
   Card,
@@ -12,29 +12,19 @@ import {
   Col,
   Container,
 } from "reactstrap";
-import axios from "axios";
+
+const url =
+  "https://api.zapper.fi/v1/apps?api_key=96e0cc51-a62e-42ca-acee-910ea7d2a241";
 
 function Zapper() {
-  const [list, setList] = useState(null);
-
-  const fetchData = async () => {
-    const response = await axios.get(
-      "https://api.zapper.fi/v1/apps?api_key=96e0cc51-a62e-42ca-acee-910ea7d2a241"
-    );
-    setList(response.data);
-  };
-  return (
-    <>
-      <div>
-        <div>
-          <button className="random-button" onClick={fetchData}>
-            ZapperList
-          </button>
-          <br />
-        </div>
-      </div>
-    </>
-  );
+  const [list, getList] = useState("");
+  axios
+    .get(`${url}past`)
+    .then((response) => {
+      const allList = response.data.list.allList;
+    })
+    .catch((error) => console.error(`Error: ${error}`));
+  return <></>;
 }
 
 export default Zapper;
