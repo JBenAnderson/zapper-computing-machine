@@ -1,6 +1,16 @@
 import React from "react";
-
 import axios from "axios";
+
+import {
+  Card,
+  CardBody,
+  CardImg,
+  CardText,
+  CardTitle,
+  Row,
+  Col,
+  Container,
+} from "reactstrap";
 
 export default class zapper extends React.Component {
   state = {
@@ -20,26 +30,53 @@ export default class zapper extends React.Component {
   }
   render() {
     return (
-      <ul>
+      <Row>
         {this.state.defiList.map((defiList) => (
-          <li key={defiList.id}>{defiList.name}</li>
+          <Col xs="6" sm="3" key={defiList.id} className="col">
+            <Card
+              style={{
+                margin: "0 0.5rem 10px 0.5rem",
+                padding: 0,
+                marginLeft: 23,
+              }}
+              className="card"
+            >
+              <Container id="icon">
+                {/* <CardImg
+                  top={true}
+                  className="img-fluid"
+                  alt="Responsive image"
+                  src={defiList.network}
+                /> */}
+              </Container>
+              <CardBody>
+                <CardTitle className="cardTitle">
+                  <a>{defiList.name}</a>
+                </CardTitle>
+                <CardText>{defiList.tags}</CardText>
+              </CardBody>
+              <div className="card-footer">{defiList.url}</div>
+            </Card>
+          </Col>
         ))}
-      </ul>
+        {/* <style jsx global>
+          {`
+            a {
+              color: white;
+            }
+            a:link {
+              text-decoration: none;
+              color: white;
+            }
+            a:hover {
+              color: white;
+            }
+            .card-columns {
+              column-count: 3;
+            }
+          `}
+        </style> */}
+      </Row>
     );
   }
 }
-
-//API key is standard Public key no secret needed
-// const url =
-//   "https://api.zapper.fi/v1/apps?api_key=96e0cc51-a62e-42ca-acee-910ea7d2a241";
-
-// function Zapper() {
-//   const [list, getList] = useState("");
-//   axios
-//     .get(`${url}past`)
-//     .then((response) => {
-//       const allList = response.data.list.allList;
-//     })
-//     .catch((error) => console.error(`Error: ${error}`));
-//   return <></>;
-// }

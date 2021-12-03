@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 4px 8px 0 rgb(0, 0, 0);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+  border-width: 0.5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.row {
+  align-items: stretch;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-fluid {
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 20px 0px 0px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.cardTitle {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: black;
+  font-size: x-large;
+  text-shadow: 1px 2px 3px #15ff00;
+}
+.rowDish {
+  align-items: stretch;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.column {
+  align-items: stretch;
+  width: 100%;
+}
+
+.rowRestaurant {
+  align-items: flex-start;
+
+  background-size: cover;
+
+  background-position: bottom 0px right;
+  margin: 0px 0px 0px 0px;
+  border: solid 3px;
+}
+
+#wallpaper {
+  background-color: black;
+}
+
+#linkButtonStyling {
+  border-color: rgb(0, 208, 255);
+  box-shadow: 2px 2px 4px 0 rgb(0, 123, 150);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#icon {
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
 }
