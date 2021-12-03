@@ -3,13 +3,13 @@
   box-shadow: 2px 4px 8px 0 rgb(0, 0, 0);
 }
 
-.card:hover,
+/* .card:hover,
 .card:focus,
 .card:active {
   color: #0070f3;
   border-color: #0070f3;
   border-width: 0.5px;
-}
+} */
 
 .row {
   align-items: stretch;

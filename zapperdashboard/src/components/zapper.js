@@ -10,6 +10,7 @@ import {
   Row,
   Col,
   Container,
+  NavLink,
 } from "reactstrap";
 
 export default class zapper extends React.Component {
@@ -42,12 +43,12 @@ export default class zapper extends React.Component {
               className="card"
             >
               <Container id="icon">
-                {/* <CardImg
+                <CardImg
                   top={true}
                   className="img-fluid"
                   alt="Responsive image"
-                  src={defiList.network}
-                /> */}
+                  src={defiList.supportedNetworks.network}
+                />
               </Container>
               <CardBody>
                 <CardTitle className="cardTitle">
@@ -55,27 +56,12 @@ export default class zapper extends React.Component {
                 </CardTitle>
                 <CardText>{defiList.tags}</CardText>
               </CardBody>
-              <div className="card-footer">{defiList.url}</div>
+              <NavLink href={defiList.url} target="_blank">
+                {`${defiList.url}`}
+              </NavLink>
             </Card>
           </Col>
         ))}
-        {/* <style jsx global>
-          {`
-            a {
-              color: white;
-            }
-            a:link {
-              text-decoration: none;
-              color: white;
-            }
-            a:hover {
-              color: white;
-            }
-            .card-columns {
-              column-count: 3;
-            }
-          `}
-        </style> */}
       </Row>
     );
   }
