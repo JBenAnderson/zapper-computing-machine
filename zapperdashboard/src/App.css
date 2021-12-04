@@ -3,6 +3,7 @@
   box-shadow: 1px 2px 4px 0 rgb(0, 0, 0);
   align-self: auto;
   background-color: rgb(184, 184, 184);
+  width: 18rem;
 }
 
 /* .card:hover,
@@ -18,7 +19,7 @@
   display: list-item;
   justify-content: center;
   align-items: center;
-  margin: 20px 0px 0px 0px;
+  padding-top: 20px;
 }
 
 .cardTitle {
@@ -32,6 +33,10 @@
 .col {
   align-items: stretch;
   width: 100%;
+}
+
+.row {
+  column-count: 2;
 }
 
 html,

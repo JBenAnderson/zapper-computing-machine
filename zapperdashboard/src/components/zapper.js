@@ -34,7 +34,7 @@ export default class zapper extends React.Component {
       <Container className="container-fluid">
         <Row className="row">
           {this.state.defiList.map((defiList) => (
-            <Col xs="6" sm="3" key={defiList.id} className="col">
+            <Col key={defiList.id} className="col">
               <Card
                 style={{
                   margin: "0 0.5rem 10px 0.5rem",
@@ -59,8 +59,8 @@ export default class zapper extends React.Component {
                 <button
                   type="button"
                   className="btn btn-primary"
-                  id="button"
-                  href={defiList.url}
+                  id="linkButtonStyling"
+                  href={`${defiList.url}`}
                   target="_blank"
                 >
                   {defiList.url}
