@@ -1,5 +1,5 @@
 # zapper-computing-machine
-zapper API web3 sandbox.  This project demonstrates the zapper.fi API to query defi applications and services on various blockchain networks.  We will be using React native and Axios to create a component as well as bootstrap to style the response data with a card layout.  
+zapper API web3 sandbox.  This project demonstrates the zapper.fi API to query defi applications and services on various blockchain networks.  We will be using React native and Axios to create a component as well as bootstrap to style the response data with a card style layout.  
 
 
 Installation
