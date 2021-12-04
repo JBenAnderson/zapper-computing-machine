@@ -1,6 +1,7 @@
 .card {
   margin: 0 0.5em;
-  box-shadow: 2px 4px 8px 0 rgb(0, 0, 0);
+  box-shadow: 1px 2px 4px 0 rgb(0, 0, 0);
+  align-self: auto;
 }
 
 /* .card:hover,
@@ -11,14 +12,9 @@
   border-width: 0.5px;
 } */
 
-.row {
-  align-items: stretch;
-  width: 100%;
-}
-
 .container-fluid {
-  height: 100%;
-  display: flex;
+  height: auto;
+  display: list-item;
   justify-content: center;
   align-items: center;
   margin: 20px 0px 0px 0px;
@@ -29,37 +25,19 @@
   color: black;
   font-size: x-large;
   text-shadow: 1px 2px 3px #15ff00;
+  text-align: center;
 }
 
-.column {
+.col {
   align-items: stretch;
   width: 100%;
 }
-
-.rowRestaurant {
-  align-items: flex-start;
-
-  background-size: cover;
-
-  background-position: bottom 0px right;
-  margin: 0px 0px 0px 0px;
-  border: solid 3px;
-}
-
-#wallpaper {
-  background-color: black;
-}
-
-#linkButtonStyling {
-  border-color: rgb(0, 208, 255);
-  box-shadow: 2px 2px 4px 0 rgb(0, 123, 150);
-}
-
+/* 
 html,
 body {
   width: 100%;
   height: 100%;
-}
+} */
 
 #icon {
   position: relative;
@@ -67,4 +45,14 @@ body {
   width: fit-content;
   height: fit-content;
   display: inline-block;
+}
+
+.tags {
+  text-align: center;
+}
+
+.navLink {
+  align-self: center;
+  align-content: center;
+  align-items: center;
 }

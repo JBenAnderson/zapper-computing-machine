@@ -31,38 +31,43 @@ export default class zapper extends React.Component {
   }
   render() {
     return (
-      <Row>
-        {this.state.defiList.map((defiList) => (
-          <Col xs="6" sm="3" key={defiList.id} className="col">
-            <Card
-              style={{
-                margin: "0 0.5rem 10px 0.5rem",
-                padding: 0,
-                marginLeft: 23,
-              }}
-              className="card"
-            >
-              <Container id="icon">
-                <CardImg
-                  top={true}
-                  className="img-fluid"
-                  alt="Responsive image"
-                  src={defiList.supportedNetworks.network}
-                />
-              </Container>
-              <CardBody>
-                <CardTitle className="cardTitle">
-                  <a>{defiList.name}</a>
-                </CardTitle>
-                <CardText>{defiList.tags}</CardText>
-              </CardBody>
-              <NavLink href={defiList.url} target="_blank">
-                {`${defiList.url}`}
-              </NavLink>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+      <Container className="container-fluid">
+        <Row className="row">
+          {this.state.defiList.map((defiList) => (
+            <Col xs="6" sm="3" key={defiList.id} className="col">
+              <Card
+                style={{
+                  margin: "0 0.5rem 10px 0.5rem",
+                  padding: 0,
+                  marginLeft: 23,
+                }}
+                className="card"
+              >
+                <Container id="icon">
+                  <CardImg
+                    top={true}
+                    className="img-fluid"
+                    alt="Responsive image"
+                  />
+                </Container>
+                <CardBody>
+                  <CardTitle className="cardTitle">
+                    <a>{defiList.name}</a>
+                  </CardTitle>
+                  <CardText className="tags">{defiList.tags}</CardText>
+                </CardBody>
+                <NavLink
+                  href={defiList.url}
+                  target="_blank"
+                  className="navLink"
+                >
+                  {`${defiList.url}`}
+                </NavLink>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     );
   }
 }
