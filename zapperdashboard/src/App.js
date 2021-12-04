@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <div className="poweredBy">
-        <a href="https://zapper.fi">
+        <a href="https://zapper.fi" target="_blank">
           <img src={mySVG} alt="powered by zapper.fi!" />
         </a>
       </div>
