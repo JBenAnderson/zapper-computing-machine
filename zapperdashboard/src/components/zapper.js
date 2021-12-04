@@ -56,13 +56,15 @@ export default class zapper extends React.Component {
                   </CardTitle>
                   <CardText className="tags">{defiList.tags}</CardText>
                 </CardBody>
-                <NavLink
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  id="button"
                   href={defiList.url}
                   target="_blank"
-                  className="navLink"
                 >
-                  {`${defiList.url}`}
-                </NavLink>
+                  {defiList.url}
+                </button>
               </Card>
             </Col>
           ))}

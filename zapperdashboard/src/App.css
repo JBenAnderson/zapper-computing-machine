@@ -2,6 +2,7 @@
   margin: 0 0.5em;
   box-shadow: 1px 2px 4px 0 rgb(0, 0, 0);
   align-self: auto;
+  background-color: rgb(184, 184, 184);
 }
 
 /* .card:hover,
@@ -32,12 +33,15 @@
   align-items: stretch;
   width: 100%;
 }
-/* 
+
 html,
 body {
   width: 100%;
   height: 100%;
-} */
+}
+.App {
+  background-color: rgb(255, 255, 255);
+}
 
 #icon {
   position: relative;
@@ -49,10 +53,4 @@ body {
 
 .tags {
   text-align: center;
-}
-
-.navLink {
-  align-self: center;
-  align-content: center;
-  align-items: center;
 }
