@@ -16,10 +16,10 @@
 
 .container-fluid {
   height: auto;
-  display: list-item;
+
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .cardTitle {
@@ -59,4 +59,12 @@ body {
 
 .tags {
   text-align: center;
+}
+
+.poweredBy {
+  padding-top: 10px;
+  padding-right: 10px;
+  text-align: right;
+  background-color: rgb(0, 81, 255);
+  height: 100px;
 }
